@@ -1,0 +1,1 @@
+// Configurações globais dos testes Cypress serão adicionadas aqui.

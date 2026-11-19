@@ -239,3 +239,17 @@
 
 **Validação:** 1 suíte Jest aprovada, com 1 teste aprovado.
 
+## Entrega 2 — Teste de front-end com Cypress
+
+**Prática:** configurei Cypress no projeto React e automatizei o fluxo de navegação e interação da página de tecnologias.
+
+**Conceitos aplicados:**
+
+- configuração de teste ponta a ponta com URL base do Vite;
+- navegação simulada pelo navegador com `cy.visit` e `cy.contains`;
+- verificação de URL, textos e elementos visíveis;
+- interação com botões e validação da atualização de estado React;
+- arquivos de suporte globais do Cypress.
+
+**Validação:** 1 especificação Cypress aprovada, com 1 teste aprovado e 0 falhas.
+
