@@ -60,3 +60,34 @@
 
 **Resultado:** Módulo 1 praticado com HTML, CSS, Flexbox, responsividade, Git, GitHub, Pull Request e Bootstrap.
 
+# Diário de estudo — Módulo 2
+
+## Entrega 1 — Fundamentos de JavaScript
+
+**Prática:** criei um laboratório JavaScript separado do portfólio e gerei uma mensagem após o clique em um botão.
+
+**Conceitos aplicados:**
+
+- constantes com `const`;
+- arrays;
+- funções e `return`;
+- seleção de elementos com `querySelector`;
+- eventos de clique com `addEventListener`;
+- alteração de texto com `textContent`.
+
+**Próximo passo:** listar as tecnologias na tela e usar decisão condicional para exibir o progresso.
+
+## Entrega 2 — Decisão, arrays e repetição
+
+**Prática:** mostrei uma lista de tecnologias após um clique e exibi uma mensagem de progresso conforme a quantidade de itens.
+
+**Conceitos aplicados:**
+
+- tamanho de array com `length`;
+- decisão com operador ternário;
+- repetição com `for...of`;
+- criação de elementos com `createElement`;
+- inclusão no documento com `appendChild`.
+
+**Validação manual:** adicionei `Git` ao array e alterei a condição para quatro tecnologias; a lista e a mensagem foram atualizadas como esperado.
+
