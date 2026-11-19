@@ -194,3 +194,17 @@
 
 **Validação:** 4 testes aprovados e 0 falhas.
 
+## Entrega 4 — Usuários e relacionamento
+
+**Prática:** criei o modelo `Usuario`, o cadastro em `POST /usuarios` e o relacionamento entre usuários e tecnologias.
+
+**Conceitos aplicados:**
+
+- modelo com campos obrigatórios e e-mail único;
+- hash de senha com `bcryptjs` e hook `beforeCreate`;
+- resposta segura: a senha não é devolvida pela API;
+- relacionamento um-para-muitos com `hasMany` e `belongsTo`;
+- chave estrangeira `usuarioId` na tabela de tecnologias.
+
+**Validação:** 5 testes aprovados e 0 falhas, incluindo confirmação de que a senha foi salva como hash.
+

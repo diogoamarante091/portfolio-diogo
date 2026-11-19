@@ -1,6 +1,6 @@
 const express = require('express')
 const cors = require('cors')
-const { Tecnologia } = require('./models')
+const { Tecnologia, Usuario } = require('./models')
 
 const app = express()
 
@@ -49,6 +49,32 @@ app.post('/tecnologias', async (requisicao, resposta, proximo) => {
     })
 
     resposta.status(201).json(tecnologia)
+  } catch (erro) {
+    proximo(erro)
+  }
+})
+
+app.post('/usuarios', async (requisicao, resposta, proximo) => {
+  try {
+    const { nome, email, senha } = requisicao.body
+
+    if (!nome || !email || !senha) {
+      return resposta.status(400).json({
+        erro: 'Nome, e-mail e senha são obrigatórios',
+      })
+    }
+
+    const usuario = await Usuario.create({
+      nome,
+      email,
+      senha,
+    })
+
+    resposta.status(201).json({
+      id: usuario.id,
+      nome: usuario.nome,
+      email: usuario.email,
+    })
   } catch (erro) {
     proximo(erro)
   }
