@@ -1,6 +1,10 @@
 const express = require('express')
 const cors = require('cors')
+const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken')
+
 const { Tecnologia, Usuario } = require('./models')
+const autenticar = require('./middlewares/autenticar')
 
 const app = express()
 
@@ -79,6 +83,57 @@ app.post('/usuarios', async (requisicao, resposta, proximo) => {
     proximo(erro)
   }
 })
+
+app.post('/auth/login', async (requisicao, resposta, proximo) => {
+  try {
+    const { email, senha } = requisicao.body
+
+    const usuario = await Usuario.findOne({
+      where: { email },
+    })
+
+    const senhaCorreta =
+      usuario && (await bcrypt.compare(senha, usuario.senha))
+
+    if (!senhaCorreta) {
+      return resposta.status(401).json({
+        erro: 'E-mail ou senha inválidos',
+      })
+    }
+
+    const token = jwt.sign(
+      {
+        id: usuario.id,
+        email: usuario.email,
+      },
+      process.env.JWT_SECRET,
+      {
+        expiresIn: '1h',
+      },
+    )
+
+    resposta.json({ token })
+  } catch (erro) {
+    proximo(erro)
+  }
+})
+
+app.get(
+  '/minhas-tecnologias',
+  autenticar,
+  async (requisicao, resposta, proximo) => {
+    try {
+      const tecnologias = await Tecnologia.findAll({
+        where: { usuarioId: requisicao.usuario.id },
+        order: [['id', 'ASC']],
+      })
+
+      resposta.json(tecnologias)
+    } catch (erro) {
+      proximo(erro)
+    }
+  },
+)
 
 app.use((erro, requisicao, resposta, proximo) => {
   console.error(erro)

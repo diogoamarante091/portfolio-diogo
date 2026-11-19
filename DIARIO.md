@@ -208,3 +208,18 @@
 
 **Validação:** 5 testes aprovados e 0 falhas, incluindo confirmação de que a senha foi salva como hash.
 
+## Entrega 5 — Autenticação com JWT
+
+**Prática:** implementei login e uma rota protegida para consultar tecnologias do usuário autenticado.
+
+**Conceitos aplicados:**
+
+- comparação segura de senha com `bcrypt.compare`;
+- criação de token JWT com identificador do usuário e expiração de uma hora;
+- middleware para ler o cabeçalho `Authorization: Bearer <token>`;
+- retorno `401 Unauthorized` quando o token não existe, é inválido ou expirou;
+- rota protegida `GET /minhas-tecnologias` filtrada pelo `usuarioId` do token;
+- variável privada `JWT_SECRET` no arquivo `.env`, fora do Git.
+
+**Validação:** 8 testes aprovados e 0 falhas, cobrindo login, bloqueio sem token e acesso autorizado.
+
