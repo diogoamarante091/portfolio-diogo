@@ -133,3 +133,17 @@
 
 **Validação:** perfil exibido no navegador; lint e build de produção passaram sem erros.
 
+## Entrega 6 — PrimeReact
+
+**Prática:** adicionei uma página com componentes prontos da biblioteca PrimeReact.
+
+**Conceitos aplicados:**
+
+- instalação de dependências com npm;
+- tema e ícones importados no ponto de entrada da aplicação;
+- componentes `Card`, `Button` e `Tag`;
+- estado React atualizado a partir de um componente de biblioteca;
+- rota exclusiva para a demonstração.
+
+**Validação:** interação testada no navegador; lint e build de produção passaram sem erros.
+

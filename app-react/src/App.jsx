@@ -3,6 +3,7 @@ import { NavLink, Route, Routes } from 'react-router-dom'
 import TechnologyList from './components/TechnologyList'
 import './App.css'
 import GitHubProfile from './components/GitHubProfile'
+import PrimeReactDemo from './components/PrimeReactDemo'
 
 function Home() {
   return (
@@ -79,6 +80,8 @@ function App() {
         <NavLink to="/tecnologias">Tecnologias</NavLink>
         <NavLink to="/sobre">Sobre</NavLink>
         <NavLink to="/perfil">Perfil GitHub</NavLink>
+        <NavLink to="/primereact">PrimeReact</NavLink>
+        
       </nav>
 
       <Routes>
@@ -86,7 +89,9 @@ function App() {
         <Route path="/tecnologias" element={<Tecnologias />} />
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/perfil" element={<GitHubProfile />} />
-      </Routes>
+        <Route path="/primereact" element={<PrimeReactDemo />} />
+        <Route path="/prime" element={<PrimeReactDemo />} />
+        </Routes>
     </main>
   )
 }

@@ -98,3 +98,16 @@ button:hover {
   color: #5b21b6;
   font-weight: bold;
 }
+
+.prime-page {
+  max-width: 600px;
+  width: 100%;
+}
+
+.prime-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
