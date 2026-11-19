@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { NavLink, Route, Routes } from 'react-router-dom'
 import TechnologyList from './components/TechnologyList'
 import './App.css'
+import GitHubProfile from './components/GitHubProfile'
 
 function Home() {
   return (
@@ -77,12 +78,14 @@ function App() {
         <NavLink to="/">Início</NavLink>
         <NavLink to="/tecnologias">Tecnologias</NavLink>
         <NavLink to="/sobre">Sobre</NavLink>
+        <NavLink to="/perfil">Perfil GitHub</NavLink>
       </nav>
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tecnologias" element={<Tecnologias />} />
         <Route path="/sobre" element={<Sobre />} />
+        <Route path="/perfil" element={<GitHubProfile />} />
       </Routes>
     </main>
   )

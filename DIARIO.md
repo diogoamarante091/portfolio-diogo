@@ -119,3 +119,17 @@
 
 **Validação:** testei as três rotas no navegador; lint e build de produção passaram sem erros.
 
+## Entrega 5 — Requisição de dados
+
+**Prática:** criei a rota Perfil e consultei dados públicos do GitHub.
+
+**Conceitos aplicados:**
+
+- busca assíncrona com `fetch`;
+- `useEffect` para disparar a busca quando o componente é exibido;
+- estados de carregamento, sucesso e erro;
+- dados de API renderizados na interface;
+- link externo com `target="_blank"` e `rel="noreferrer"`.
+
+**Validação:** perfil exibido no navegador; lint e build de produção passaram sem erros.
+

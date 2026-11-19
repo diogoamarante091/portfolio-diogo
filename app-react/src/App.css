@@ -86,3 +86,15 @@ button:hover {
   border-bottom: 3px solid #aa04c7;
   color: #aa04c7;
 }
+
+.profile img {
+  border-radius: 50%;
+  height: 120px;
+  margin-bottom: 16px;
+  width: 120px;
+}
+
+.profile a {
+  color: #5b21b6;
+  font-weight: bold;
+}
