@@ -164,3 +164,18 @@
 
 **Validação:** o teste da rota de saúde passou com 1 sucesso e 0 falhas.
 
+## Entrega 2 — Banco de dados com Sequelize e SQLite
+
+**Prática:** modelei a entidade `Tecnologia` e criei a rota `GET /tecnologias` para consultar dados persistidos.
+
+**Conceitos aplicados:**
+
+- SQLite como banco de dados local;
+- Sequelize para declarar modelos com tipos e regras;
+- ambiente de teste com banco em memória (`:memory:`);
+- `sequelize.sync()` para criar as tabelas no banco local;
+- consulta ordenada com `findAll`;
+- tratamento centralizado de erro no Express.
+
+**Validação:** a suíte automatizada passou com 2 testes aprovados e 0 falhas.
+
