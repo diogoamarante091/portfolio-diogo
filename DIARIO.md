@@ -39,16 +39,24 @@
 
 ## Entrega 4 — Git e GitHub
 
-**Prática:** iniciei um repositório Git local, criei o primeiro commit e publiquei o projeto no GitHub.
+**Prática:** iniciei um repositório Git local, criei o primeiro commit, publiquei o projeto no GitHub e integrei uma alteração usando branch e Pull Request.
 
 **Comandos praticados:**
 
-- `git init`
-- `git status`
-- `git add .`
-- `git commit`
-- `git remote add origin`
-- `git push -u origin main`
-- `git switch -c`
+- `git init`, `git status`, `git add` e `git commit`;
+- `git branch`, `git switch -c` e `git branch -d`;
+- `git remote add`, `git push` e `git pull`.
 
-**Próximo passo:** publicar esta anotação em uma branch e abrir um Pull Request.
+## Entrega 5 — Bootstrap
+
+**Prática:** criei uma página independente com Bootstrap via CDN.
+
+**Conceitos aplicados:**
+
+- `container`, `row` e colunas responsivas;
+- componentes `navbar`, `card`, `badge` e `button`;
+- classes utilitárias de espaçamento, sombras e tipografia;
+- teste do grid em tela pequena: três colunas passam a uma coluna.
+
+**Resultado:** Módulo 1 praticado com HTML, CSS, Flexbox, responsividade, Git, GitHub, Pull Request e Bootstrap.
+
