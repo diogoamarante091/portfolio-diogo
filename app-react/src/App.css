@@ -2,6 +2,7 @@
   align-items: center;
   background: #f4f7fb;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   min-height: 100vh;
   padding: 24px;
@@ -66,4 +67,22 @@ button:hover {
   border-radius: 20px;
   color: #5b21b6;
   padding: 8px 14px;
+}
+
+.navigation {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.navigation a {
+  color: #5b21b6;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navigation a.active {
+  border-bottom: 3px solid #aa04c7;
+  color: #aa04c7;
 }

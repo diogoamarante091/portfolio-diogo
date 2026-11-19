@@ -106,3 +106,16 @@
 - importação, exportação e props;
 - verificação com ESLint e build de produção do Vite.
 
+## Entrega 4 — Rotas com React Router
+
+**Prática:** adicionei navegação entre Início, Tecnologias e Sobre sem recarregar a aplicação.
+
+**Conceitos aplicados:**
+
+- `BrowserRouter` como contexto de navegação;
+- `Routes` e `Route` para associar URL e componente;
+- `NavLink` para links e indicação visual de rota ativa;
+- separação entre as páginas inicial, tecnologias e sobre.
+
+**Validação:** testei as três rotas no navegador; lint e build de produção passaram sem erros.
+
