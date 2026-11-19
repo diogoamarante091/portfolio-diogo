@@ -91,3 +91,18 @@
 
 **Validação manual:** adicionei `Git` ao array e alterei a condição para quatro tecnologias; a lista e a mensagem foram atualizadas como esperado.
 
+## Entrega 3 — Primeiro projeto React
+
+**Prática:** criei uma aplicação React com Vite e substituí a tela padrão por um laboratório de tecnologias.
+
+**Conceitos aplicados:**
+
+- estrutura de projeto com Node.js, npm e Vite;
+- componente principal `App`;
+- estado com `useState`;
+- eventos `onClick`;
+- renderização condicional;
+- componente separado `TechnologyList`;
+- importação, exportação e props;
+- verificação com ESLint e build de produção do Vite.
+
