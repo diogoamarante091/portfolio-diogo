@@ -1,0 +1,6 @@
+# Dependências instaladas apenas na máquina local
+api/node_modules/
+
+# Configurações e banco de dados locais
+api/.env
+api/data/*.sqlite

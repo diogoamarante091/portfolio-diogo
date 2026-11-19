@@ -147,3 +147,20 @@
 
 **Validação:** interação testada no navegador; lint e build de produção passaram sem erros.
 
+# Diário de estudo — Módulo 3
+
+## Entrega 1 — API HTTP com Node.js e Express
+
+**Prática:** criei uma API independente na pasta `api` e implementei a rota `GET /health`.
+
+**Conceitos aplicados:**
+
+- Node.js e `npm` para organizar dependências e comandos;
+- Express para criar o servidor e as rotas;
+- `cors` para permitir a futura comunicação com o front-end;
+- `express.json()` para receber dados JSON;
+- separação entre `app.js` (regras da aplicação) e `server.js` (inicialização do servidor);
+- teste automatizado com `node:test` e Supertest.
+
+**Validação:** o teste da rota de saúde passou com 1 sucesso e 0 falhas.
+
