@@ -16,11 +16,39 @@ app.get('/health', (requisicao, resposta) => {
 
 app.get('/tecnologias', async (requisicao, resposta, proximo) => {
   try {
+    const filtro = {}
+
+    if (requisicao.query.categoria) {
+      filtro.categoria = requisicao.query.categoria
+    }
+
     const tecnologias = await Tecnologia.findAll({
+      where: filtro,
       order: [['id', 'ASC']],
     })
 
     resposta.json(tecnologias)
+  } catch (erro) {
+    proximo(erro)
+  }
+})
+
+app.post('/tecnologias', async (requisicao, resposta, proximo) => {
+  try {
+    const { nome, categoria } = requisicao.body
+
+    if (!nome || !categoria) {
+      return resposta.status(400).json({
+        erro: 'Nome e categoria são obrigatórios',
+      })
+    }
+
+    const tecnologia = await Tecnologia.create({
+      nome,
+      categoria,
+    })
+
+    resposta.status(201).json(tecnologia)
   } catch (erro) {
     proximo(erro)
   }

@@ -179,3 +179,18 @@
 
 **Validação:** a suíte automatizada passou com 2 testes aprovados e 0 falhas.
 
+## Entrega 3 — Cadastro e filtros de tecnologias
+
+**Prática:** adicionei as rotas para cadastrar tecnologias e filtrar a listagem por categoria.
+
+**Conceitos aplicados:**
+
+- rota `POST /tecnologias`;
+- código HTTP `201 Created` para um cadastro bem-sucedido;
+- validação de campos obrigatórios e código `400 Bad Request`;
+- query string, como `?categoria=Back-end`;
+- filtro do Sequelize com `where`;
+- `beforeEach` para que cada teste possua um banco isolado.
+
+**Validação:** 4 testes aprovados e 0 falhas.
+
