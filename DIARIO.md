@@ -223,3 +223,19 @@
 
 **Validação:** 8 testes aprovados e 0 falhas, cobrindo login, bloqueio sem token e acesso autorizado.
 
+# Diário de estudo — Módulo 4
+
+## Entrega 1 — Teste de back-end com Jest
+
+**Prática:** instalei e configurei Jest para testar a API sem interferir na suíte de integração já existente.
+
+**Conceitos aplicados:**
+
+- configuração de ambiente `node` no Jest;
+- padrão exclusivo `*.jest.test.js` para separar as suítes;
+- `describe`, `test`, `expect` e `toEqual`;
+- teste de integração da rota `GET /health` com Supertest;
+- execução serial com `--runInBand`.
+
+**Validação:** 1 suíte Jest aprovada, com 1 teste aprovado.
+
